@@ -32,10 +32,11 @@ export function Nav() {
         <Image src={logo} alt='logos' />
       </div>
       
-      <div className="flex mb-2 bg-gray-150 items-center rounded-lg mt-4">
+      <div className="flex mb-2 bg-gray-600 items-center rounded-lg mt-4">
         <Search size={22} className='pl-2'/>
         <PrimaryInputSearchIcon
           type='text'
+          className="w-full p-2 outline-none placeholder-gray-100 font-sans rounded-lg bg-gray-600"
           value={filterNav}
           updateValue={setfilterNav} 
           placeholder='Pesquisar...'
@@ -82,7 +83,7 @@ export function Nav() {
           <Settings size={22} className="ml-2"/>
           Configuração
         </Link>
-        <Link href={'/sair'} className={inactiveLink}>
+        <Link href={'/'} className={inactiveLink}>
           <LogOut size={22} className="ml-2"/>
           Sair
         </Link>

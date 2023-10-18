@@ -7,7 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { PrimaryInputSearchIcon } from "@/components/primary-input";
 import { User, LockKeyhole } from "lucide-react";
 import { useUsersData } from "@/hooks/useUsersData";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Logo } from "@/components/icons/logo-login";
 
@@ -48,7 +48,7 @@ export function Login() {
       senha,
     }
     mutate(data)
-    router.push('/users')
+    router.push('/inicio')
   }
 
 
@@ -71,6 +71,7 @@ export function Login() {
         <User className="pl-2" size={25}/>
         <PrimaryInputSearchIcon
           type="text"
+          className="w-full p-2 outline-none placeholder-gray-100 font-sans rounded-lg"
           value={name}
           updateValue={setName}
           placeholder="Usuário"
@@ -83,6 +84,7 @@ export function Login() {
         <LockKeyhole className="pl-2" size={25}/>
         <PrimaryInputSearchIcon
           type="password"
+          className="w-full p-2 outline-none placeholder-gray-100 font-sans rounded-lg"
           value={senha}
           updateValue={setSenha}
           placeholder="Senha"

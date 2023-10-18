@@ -3,7 +3,7 @@ import LayoutComponent from "@/components/layout-component";
 export default function Ajuda() {
   return (
     <LayoutComponent>
-      <p>AJUDA</p>
+      <p className="text-xl">Ajuda</p>   
     </LayoutComponent>
   )
 }

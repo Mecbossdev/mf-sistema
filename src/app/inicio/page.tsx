@@ -21,14 +21,14 @@ export default function Inicio() {
 
   return (
     <LayoutComponent>
-        <p>Inicio</p>
-        <>
+      <p className="text-xl">Home</p>   
+      <>
         {data?.map(data => (
             <div key={data.id}>
                 <h1>{data.name}</h1>
             </div>
             ))}
-        </>
+      </>
     </LayoutComponent>
   )
 }
